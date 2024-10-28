@@ -23,6 +23,7 @@ public class Runner {
         table.insert(88888);
         table.insert(2048);
         table.insert(123456);
+        table.remove(2048);
         System.out.println(table.toString());
         table.testHashFunction();
     }

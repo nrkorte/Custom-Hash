@@ -73,7 +73,7 @@ public class HashTable {
         return false;
     }
 
-    public void resize () {
+    private void resize () {
         this.maxSize = (int) (this.maxSize * 1.5);
         ArrayList<LinkedList<Integer>> new_bucks = new ArrayList<>();
         for (int i = 0; i < maxSize; i++) {
