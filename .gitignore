@@ -1,0 +1,21 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Except for these specific files and directories
+!src/com/example/AppClasses/
+!src/com/example/AppClasses/HashTable.java
+!src/com/example/Runner.java
+!src/com/key.txt
+
+# Ignore everything else
+/out
+/.idea
+/Custom-Hash.iml
+/Hashing.iml
+/LICENSE
