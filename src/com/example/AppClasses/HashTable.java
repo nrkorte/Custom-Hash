@@ -61,7 +61,7 @@ public class HashTable {
         if (buckets.get(index) == null) return false;
         ListIterator<Integer> iterator = buckets.get(index).listIterator();
         while (iterator.hasNext()) {
-            if (iterator.next().equals(value)) {
+            if (iterator.next().equals((Integer) value)) {
                 iterator.remove();
                 if (buckets.get(index).isEmpty()) {
                     buckets.set(index, null);
@@ -85,14 +85,8 @@ public class HashTable {
                     int new_index = hash(value);
                     if (new_bucks.get(new_index) == null) {
                         new_bucks.set(new_index, new LinkedList<Integer>());
-                        new_bucks.get(new_index).add(value);
-                    } else {
-                        ListIterator iterator = new_bucks.get(new_index).listIterator();
-                        while (iterator.hasNext()) {
-                            iterator.next();
-                        }
-                        iterator.add(value);
                     }
+                    new_bucks.get(new_index).add(value);
                 }
             }
         }
@@ -135,10 +129,11 @@ public class HashTable {
                     int actual = hash(value);
 
                     if (actual == expected) {
-                        System.out.println("Test passed for value " + value + " in bucket " + bucketIndex + ": expected bucket " + expected + ", got " + actual);
+                        System.out.println("\u001B[32mTest passed for value " + value + " in bucket " + bucketIndex + ": expected bucket " + expected + ", got " + actual + "\u001B[0m");
                     } else {
-                        System.out.println("Test failed for value " + value + " in bucket " + bucketIndex + ": expected bucket " + expected + ", got " + actual);
+                        System.out.println("\u001B[31mTest failed for value " + value + " in bucket " + bucketIndex + ": expected bucket " + expected + ", got " + actual + "\u001B[0m");
                     }
+
                 }
             }
         }

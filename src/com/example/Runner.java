@@ -12,6 +12,8 @@ public class Runner {
         table.insert(989898);
         table.insert(989898);
         table.insert(554);
+        table.insert(2048);
+        table.remove(2048);
         table.insert(252353);
         table.insert(4575674);
         table.insert(467486742);
@@ -21,9 +23,12 @@ public class Runner {
         table.insert(42);
         table.insert(1001);
         table.insert(88888);
-        table.insert(2048);
         table.insert(123456);
-        table.remove(2048);
+        table.remove(1);
+        table.remove(88888);
+        table.remove(4575674);
+        table.remove(15);
+        table.remove(42);
         System.out.println(table.toString());
         table.testHashFunction();
     }
